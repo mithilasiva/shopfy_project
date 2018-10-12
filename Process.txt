@@ -1,0 +1,5 @@
+Docker Image Creation
+
+--> Modified gemfile inside project
+-->Updated bundle by running bundle update
+-->

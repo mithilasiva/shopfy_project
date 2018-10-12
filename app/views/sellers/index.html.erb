@@ -1,0 +1,24 @@
+<h1>Listing All Sellers and thier Items</h1>
+
+
+<%= link_to 'New seller', new_seller_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Item</th>
+    <th></th>
+  </tr>
+ 
+  <% @seller.each do |seller| %>
+    <tr>
+      <td><%= seller.title %></td>
+      <td><%= seller.text %></td>
+      <td><%= link_to 'Show', seller_path(seller) %></td>
+	  <td><%= link_to 'Edit', edit_seller_path(seller) %></td>
+	  <td><%= link_to 'Destroy', seller_path(seller),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
