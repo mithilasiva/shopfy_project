@@ -7,8 +7,9 @@ end
 
 
 # Adding 2 new gems for creating docker image
-gem 'json'
-gem 'bigdecimal'
+# gem 'json'
+# gem 'bigdecimal'
+gem 'nokogiri' # Added for modern bundler dependancy
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
@@ -43,6 +44,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # Added these 2
+  gem 'spring'
 end
 
 group :development do
@@ -52,4 +55,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # Modified this gem and removed , platforms: [:mingw, :mswin, :x64_mingw, :jruby], to this:
-gem 'tzinfo-data' 
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
